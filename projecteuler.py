@@ -62,16 +62,19 @@ def prob4(x):
 # Smallest Multiple
 # What is the smallest positive number evenly divisible by all number from 1 to 20?
 def prob5():
-    count = 2521
+    count = 2
     found = False
+    div_nums = 20
     while not found:
-        for i in range(2, 20, 1):
-            if count % i != 0:
-                count += 1
-                print(count)
-                break
-            if i == 19:
+        for i in range(1, div_nums + 1, 1):
+            if i == div_nums:
                 found = True
+                print(count)
+            elif count % i != 0:
+                count += 1
+                # print(count)
+                break
+
 
 
 ''' ********* HELPER FUNCTIONS ********* '''
